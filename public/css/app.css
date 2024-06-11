@@ -1,0 +1,9 @@
+body{
+    background-image: linear-gradient(100deg, #575656, #062e3f);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    padding-top: 3%;
+}
