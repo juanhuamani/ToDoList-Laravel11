@@ -19,18 +19,6 @@ Este es un proyecto de TodoList desarrollado con Laravel 11.
 7. Ejecuta las migraciones de la base de datos con el comando `php artisan migrate`.
 8. Inicia el servidor de desarrollo con el comando `php artisan serve`.
 
-## Uso
-
-Una vez que el servidor de desarrollo esté en funcionamiento, puedes acceder a la aplicación en tu navegador web ingresando la URL `http://localhost:8000`. Desde allí, podrás agregar, editar y eliminar tareas de tu lista.
-
-## Contribución
-
-Si deseas contribuir a este proyecto, sigue los siguientes pasos:
-
-1. Haz un fork de este repositorio.
-2. Crea una nueva rama con la funcionalidad o corrección que deseas agregar.
-3. Realiza los cambios necesarios y realiza un commit.
-4. Envía un pull request a la rama principal.
 
 ## Licencia
 
