@@ -35,3 +35,6 @@ Si deseas contribuir a este proyecto, sigue los siguientes pasos:
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT. Para más información, consulta el archivo [LICENSE](LICENSE).
+
+## Screen
+
