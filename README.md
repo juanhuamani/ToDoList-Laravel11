@@ -1,5 +1,5 @@
 # TodoList Laravel 11
-
+<img class='text-center' src='/public/screen/1.png'>
 Este es un proyecto de TodoList desarrollado con Laravel 11. 
 
 ## Requisitos
@@ -37,4 +37,6 @@ Si deseas contribuir a este proyecto, sigue los siguientes pasos:
 Este proyecto está bajo la Licencia MIT. Para más información, consulta el archivo [LICENSE](LICENSE).
 
 ## Screen
-
+<img src='/public/screen/1.png'>
+<img src='/public/screen/2.png'>
+<img src='/public/screen/3.png'>
