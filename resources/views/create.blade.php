@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="max-w-3xl mx-auto text-center mt-16 mb-10">
+    <div class="max-w-3xl mx-auto text-center mb-5">
         <h1 class="text-4xl font-bold text-white leading-tight mb-2 border-t-4 border-b-4 border-purple-600 py-4">
           Create a new task
         </h1>
@@ -33,12 +33,15 @@
                 </div>
             @enderror
         </div>
-        <div>
+        <div class="mb-4">
             <label for="category" class="sr-only">Category</label>
             <div name="category" id="category" class="bg-gray-100 border-2 w-full p-4 rounded-lg @error('category') border-red-500 @enderror">
-                <label for="category">Category</label>
+                <label for="category" class="sr-only">Category</label>
                 @foreach ($categories as $category)
-                    <input name="category[]" type="checkbox" value="{{ $category->id }}">{{ $category->name }}</input>
+                    <div class="flex items-center mb-2">
+                        <input name="category[]" type="checkbox" value="{{ $category->id }}" id="category-{{ $category->id }}" class="form-checkbox h-5 w-5 text-blue-600 transition duration-150 ease-in-out">
+                        <label for="category-{{ $category->id }}" class="ml-2 text-gray-700">{{ $category->name }}</label>
+                    </div>
                 @endforeach
             </div>
             @error('category')

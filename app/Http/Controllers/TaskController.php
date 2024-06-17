@@ -11,7 +11,7 @@ class TaskController extends Controller
 {
     public function index()
     {
-        $tasks = task::all();
+        $tasks = task::orderBy('date', 'asc')->paginate(5);
         $categories = Category::all();
         return view('home', compact('tasks', 'categories'));
     }
@@ -46,18 +46,28 @@ class TaskController extends Controller
 
     public function edit(task $task)
     {
-        //
+        return view('edit', compact('task'));
     }
 
     public function update(Request $request, task $task)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'date' => 'required',
+        ]);
+
+        $task->update($request->all());
+        session()->flash('message', 'Task successfully updated.');
+        return redirect('/');
     }
 
     public function destroy(task $task)
     {
         $task->delete();
-        return back();
+        $tasks = task::orderBy('date', 'asc')->paginate(5);
+        $categories = Category::all();
+        return redirect('/');
     }
     
     public function complete(task $task)
@@ -76,7 +86,7 @@ class TaskController extends Controller
 
     public function search(Request $request)
     {
-        $tasks = task::where('name', 'like', '%'.$request->search.'%')->get();
+        $tasks = task::where('name', 'like', '%'.$request->search.'%')->paginate(5);
         $categories = Category::all();
         return view('home', compact('tasks', 'categories'));
     }

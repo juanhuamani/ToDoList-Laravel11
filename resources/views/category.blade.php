@@ -3,6 +3,11 @@
         <h1 class="text-4xl text-center font-bold text-white leading-tight mb-2 border-t-4 border-b-4 border-purple-600 py-4">
             {{$categoryTask['name']}}
         </h1> 
+        @if($categoryTask['tasks']->isEmpty())
+            <div class="text-center text-white text-2xl mt-8">
+                No tasks found
+            </div>
+        @else
         <ul>
             @foreach ($categoryTask['tasks'] as $task)
                 <a href="/tasks/{{$task->slug}}" >
@@ -12,6 +17,7 @@
                 </a>
             @endforeach
         </ul> 
+        @endif
         <div class="text-center mt-8">
             <a href="/" class="bg-blue-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition duration-300">
                 Back to Home

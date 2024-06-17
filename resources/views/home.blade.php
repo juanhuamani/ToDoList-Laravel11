@@ -36,7 +36,7 @@
             CREATE NEW TASK
         </span>
     </a>
-    <form method="GET" action="/tasks/search" class="mb-4">
+    <form method="GET" action="/tasks/search" class="mb-8">
         <input type="text" name="search" placeholder="Buscar tareas" value="{{ request('search') }}" class="border rounded p-2">
         <button type="submit" class="bg-blue-500 text-white rounded p-2">Buscar</button>
     </form>
@@ -66,8 +66,11 @@
                 </li>
             @endforeach
         </ul>
+        <div class="mt-8">
+            {{ $tasks->links() }}
+        </div>
     @endif
-    <ul class="flex row gap-10 mt-20"> 
+    <ul class="flex row gap-10 mt-20 mb-5"> 
         @foreach ($categories as $category)
             <a href="/tasks/category/{{$category->name}}" >
                 <li class="text-black bg-zinc-400 px-5 py-3 cursor-pointer">
